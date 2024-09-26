@@ -5,99 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Camisetas</title>
     <style>
-    
-        /* Estilos generales para el carrusel */
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 200px;
-}
-
-.carousel img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    display: none;
-}
-
-.carousel img.active {
-    display: block;
-}
-
-/* Botones de navegación */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0 3px 3px 0;
-    transition: 0.6s ease;
-    transform: translateY(-50%);
-}
-
-.prev {
-    left: 10px;
-    border-radius: 3px 0 0 3px;
-}
-
-.next {
-    right: 10px;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Estilos específicos para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .carousel {
-        height: 150px;
-    }
-
-    .carousel img {
-        height: 150px;
-    }
-
-    .prev, .next {
-        font-size: 14px;
-        padding: 5px;
-        width: 30px;
-        height: 30px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .prev {
-        left: 5px;
-    }
-
-    .next {
-        right: 5px;
-    }
-
-    .prev:hover, .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-}
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -154,12 +61,15 @@
             font-weight: bold;
             font-size: 18px;
             transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
+            border-radius: 3px;
             background-color: rgba(0,0,0,0.5);
+            transform: translateY(-50%);
+        }
+        .prev {
+            left: 10px;
         }
         .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+            right: 10px;
         }
         .prev:hover, .next:hover {
             background-color: rgba(0,0,0,0.8);
@@ -190,6 +100,17 @@
         .product-card button:hover {
             background-color: #0056b3;
         }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -200,9 +121,9 @@
         <!-- Producto 1 -->
         <div class="product-card">
             <div class="carousel" id="carousel1">
-                <img src="Fotos_camiestas\Boca_Juniors_2425\1.jpg" class="active" alt="Camiseta 1 Imagen 1">
-                <img src="Fotos_camiestas\Boca_Juniors_2425\2.jpg" alt="Camiseta 1 Imagen 2">
-                <img src="Fotos_camiestas\Boca_Juniors_2425\3.jpg" alt="Camiseta 1 Imagen 3">
+                <img src="Fotos_camiestas/Boca_Juniors_2425/1.jpg" class="active" alt="Camiseta 1 Imagen 1">
+                <img src="Fotos_camiestas/Boca_Juniors_2425/2.jpg" alt="Camiseta 1 Imagen 2">
+                <img src="Fotos_camiestas/Boca_Juniors_2425/3.jpg" alt="Camiseta 1 Imagen 3">
                 <a class="prev" onclick="changeImage(-1, 'carousel1')">&#10094;</a>
                 <a class="next" onclick="changeImage(1, 'carousel1')">&#10095;</a>
             </div>
@@ -212,9 +133,9 @@
         <!-- Producto 2 -->
         <div class="product-card">
             <div class="carousel" id="carousel2">
-                <img src="Fotos_camiestas\2024_Japan_Special_Edition\1.jpeg" class="active" alt="Camiseta 2 Imagen 1">
-                <img src="Fotos_camiestas\2024_Japan_Special_Edition\2.jpeg" alt="Camiseta 2 Imagen 2">
-                <img src="Fotos_camiestas\2024_Japan_Special_Edition\3.jpeg" alt="Camiseta 2 Imagen 3">
+                <img src="Fotos_camiestas/2024_Japan_Special_Edition/1.jpeg" class="active" alt="Camiseta 2 Imagen 1">
+                <img src="Fotos_camiestas/2024_Japan_Special_Edition/2.jpeg" alt="Camiseta 2 Imagen 2">
+                <img src="Fotos_camiestas/2024_Japan_Special_Edition/3.jpeg" alt="Camiseta 2 Imagen 3">
                 <a class="prev" onclick="changeImage(-1, 'carousel2')">&#10094;</a>
                 <a class="next" onclick="changeImage(1, 'carousel2')">&#10095;</a>
             </div>
@@ -224,9 +145,9 @@
         <!-- Producto 3 -->
         <div class="product-card">
             <div class="carousel" id="carousel3">
-                <img src="Fotos_camiestas\Spain_2024\1.jpeg" class="active" alt="Camiseta 3 Imagen 1">
-                <img src="Fotos_camiestas\Spain_2024\2.jpeg" alt="Camiseta 3 Imagen 2">
-                <img src="Fotos_camiestas\Spain_2024\3.jpeg" alt="Camiseta 3 Imagen 3">
+                <img src="Fotos_camiestas/Spain_2024/1.jpeg" class="active" alt="Camiseta 3 Imagen 1">
+                <img src="Fotos_camiestas/Spain_2024/2.jpeg" alt="Camiseta 3 Imagen 2">
+                <img src="Fotos_camiestas/Spain_2024/3.jpeg" alt="Camiseta 3 Imagen 3">
                 <a class="prev" onclick="changeImage(-1, 'carousel3')">&#10094;</a>
                 <a class="next" onclick="changeImage(1, 'carousel3')">&#10095;</a>
             </div>
@@ -236,46 +157,121 @@
         <!-- Producto 4 -->
         <div class="product-card">
             <div class="carousel" id="carousel4">
-                <img src="Fotos_camiestas\1_Equipacion_Malaga_2425\1.jpeg" class="active" alt="Camiseta 4 Imagen 1">
-                <img src="Fotos_camiestas\1_Equipacion_Malaga_2425\2.jpeg" alt="Camiseta 4 Imagen 2">
-                <img src="Fotos_camiestas\1_Equipacion_Malaga_2425\3.jpeg" alt="Camiseta 4 Imagen 3">
+                <img src="Fotos_camiestas/1_Equipacion_Malaga_2425/1.jpeg" class="active" alt="Camiseta 4 Imagen 1">
+                <img src="Fotos_camiestas/1_Equipacion_Malaga_2425/2.jpeg" alt="Camiseta 4 Imagen 2">
+                <img src="Fotos_camiestas/1_Equipacion_Malaga_2425/3.jpeg" alt="Camiseta 4 Imagen 3">
                 <a class="prev" onclick="changeImage(-1, 'carousel4')">&#10094;</a>
                 <a class="next" onclick="changeImage(1, 'carousel4')">&#10095;</a>
             </div>
             <h2>Equipacion Málaga 24/25</h2>
         </div>
-          <!-- Producto 5 -->
-          <div class="product-card">
+
+        <!-- Producto 5 -->
+        <div class="product-card">
             <div class="carousel" id="carousel5">
-                <img src="Fotos_camiestas\Espana_1996_Home_REtro_Jersey\1.jpg" class="active" alt="Camiseta 4 Imagen 1">
-                <img src="Fotos_camiestas\Espana_1996_Home_REtro_Jersey\2.jpg" alt="Camiseta 4 Imagen 2">
-                <img src="Fotos_camiestas\Espana_1996_Home_REtro_Jersey\3.jpg" alt="Camiseta 4 Imagen 3">
+                <img src="Fotos_camiestas/Espana_1996_Home_REtro_Jersey/1.jpg" class="active" alt="Camiseta 5 Imagen 1">
+                <img src="Fotos_camiestas/Espana_1996_Home_REtro_Jersey/2.jpg" alt="Camiseta 5 Imagen 2">
+                <img src="Fotos_camiestas/Espana_1996_Home_REtro_Jersey/3.jpg" alt="Camiseta 5 Imagen 3">
                 <a class="prev" onclick="changeImage(-1, 'carousel5')">&#10094;</a>
                 <a class="next" onclick="changeImage(1, 'carousel5')">&#10095;</a>
             </div>
-            <h2>España 1996</h2>
+            <h2>España 1996 Home Retro Jersey</h2>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-card">
+            <div class="carousel" id="carousel6">
+                <img src="Fotos_camiestas/Barcelona_2425/1.jpg" class="active" alt="Camiseta 6 Imagen 1">
+                <img src="Fotos_camiestas/Barcelona_2425/2.jpg" alt="Camiseta 6 Imagen 2">
+                <img src="Fotos_camiestas/Barcelona_2425/3.jpg" alt="Camiseta 6 Imagen 3">
+                <a class="prev" onclick="changeImage(-1, 'carousel6')">&#10094;</a>
+                <a class="next" onclick="changeImage(1, 'carousel6')">&#10095;</a>
+            </div>
+            <h2>Barça 24/25</h2>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-card">
+            <div class="carousel" id="carousel7">
+                <img src="Fotos_camiestas/Barcelona_Away_2425/1.jpg" class="active" alt="Camiseta 7 Imagen 1">
+                <img src="Fotos_cami                <img src="Fotos_camiestas/Barcelona_Away_2425/2.jpg" alt="Camiseta 7 Imagen 2">
+                <img src="Fotos_camiestas/Barcelona_Away_2425/3.jpg" alt="Camiseta 7 Imagen 3">
+                <a class="prev" onclick="changeImage(-1, 'carousel7')">&#10094;</a>
+                <a class="next" onclick="changeImage(1, 'carousel7')">&#10095;</a>
+            </div>
+            <h2>Barça Away 24/25</h2>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-card">
+            <div class="carousel" id="carousel8">
+                <img src="Fotos_camiestas\Malaga_Retro_2425\1.jpg" class="active" alt="Camiseta 8 Imagen 1">
+                <img src="Fotos_camiestas\Malaga_Retro_2425\2.jpg" alt="Camiseta 8 Imagen 2">
+                <img src="Fotos_camiestas\Malaga_Retro_2425\3.jpg" alt="Camiseta 8 Imagen 3">
+                <a class="prev" onclick="changeImage(-1, 'carousel8')">&#10094;</a>
+                <a class="next" onclick="changeImage(1, 'carousel8')">&#10095;</a>
+            </div>
+            <h2>Málaga Retro 24/25</h2>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="product-card">
+            <div class="carousel" id="carousel9">
+                <img src="Fotos_camiestas/Malaga_Training_2425/1.jpeg" class="active" alt="Camiseta 9 Imagen 1">
+                <img src="Fotos_camiestas/Malaga_Training_2425/2.jpeg" alt="Camiseta 9 Imagen 2">
+                <img src="Fotos_camiestas/Malaga_Training_2425/3.jpeg" alt="Camiseta 9 Imagen 3">
+                <a class="prev" onclick="changeImage(-1, 'carousel9')">&#10094;</a>
+                <a class="next" onclick="changeImage(1, 'carousel9')">&#10095;</a>
+            </div>
+            <h2>Málaga Training 24/25</h2>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="product-card">
+            <div class="carousel" id="carousel10">
+                <img src="Fotos_camiestas/RealMadrid_SpecialEdition_2425/1.jpg" class="active" alt="Camiseta 10 Imagen 1">
+                <img src="Fotos_camiestas/RealMadrid_SpecialEdition_2425/2.jpg" alt="Camiseta 10 Imagen 2">
+                <img src="Fotos_camiestas/RealMadrid_SpecialEdition_2425/3.jpg" alt="Camiseta 10 Imagen 3">
+                <a class="prev" onclick="changeImage(-1, 'carousel10')">&#10094;</a>
+                <a class="next" onclick="changeImage(1, 'carousel10')">&#10095;</a>
+            </div>
+            <h2>Real Madrid Edicion Espacial 24/25</h2>
+        </div>
+
+        <!-- Producto 11 -->
+        <div class="product-card">
+            <div class="carousel" id="carousel11">
+                <img src="Fotos_camiestas/RealMadrid_Training_2425/1.jpg" class="active" alt="Camiseta 11 Imagen 1">
+                <img src="Fotos_camiestas/RealMadrid_Training_2425/2.jpg" alt="Camiseta 11 Imagen 2">
+                <img src="Fotos_camiestas/RealMadrid_Training_2425/3.jpg" alt="Camiseta 11 Imagen 3">
+                <a class="prev" onclick="changeImage(-1, 'carousel11')">&#10094;</a>
+                <a class="next" onclick="changeImage(1, 'carousel11')">&#10095;</a>
+            </div>
+            <h2>RealMadrid Training 24/25</h2>
         </div>
     </div>
 
-    <script>
-        function changeImage(n, carouselId) {
-            let carousel = document.getElementById(carouselId);
-            let images = carousel.getElementsByTagName("img");
-            let activeIndex = Array.prototype.findIndex.call(images, function(img) {
-                return img.classList.contains("active");
-            });
+    <footer>
+        <p>© 2024 Catálogo de Camisetas. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="https://www.tu-sitio-web.com" target="_blank">Tu Nombre</a></p>
+    </footer>
 
-            images[activeIndex].classList.remove("active");
-            let nextIndex = (activeIndex + n + images.length) % images.length;
-            images[nextIndex].classList.add("active");
+    <script>
+        function changeImage(direction, carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const images = carousel.getElementsByTagName('img');
+            let activeIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+            // Remove active class from the current image
+            images[activeIndex].classList.remove('active');
+
+            // Calculate new active index
+            activeIndex = (activeIndex + direction + images.length) % images.length;
+
+            // Add active class to the new image
+            images[activeIndex].classList.add('active');
         }
     </script>
-    <!-- Pie de página -->
-<footer style="background-color: #333; color: white; padding: 20px 0; text-align: center;">
-    <div class="footer-container">
-        <p>Contacto: <a href="mailto:tucorreo@example.com" style="color: #00aaff; text-decoration: none;">tucorreo@example.com</a></p>
-        <p>Teléfono: <a href="tel:+1234567890" style="color: #00aaff; text-decoration: none;">+123 456 7890</a></p>
-</footer>
-
 </body>
 </html>
+
